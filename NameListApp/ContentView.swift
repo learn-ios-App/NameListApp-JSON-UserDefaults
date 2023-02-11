@@ -1,21 +1,49 @@
-//
-//  ContentView.swift
-//  NameListApp
-//
-//  Created by 渡邊魁優 on 2023/02/09.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var people = PersonDate()
+    @State var isActive = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List{
+                ForEach(people.people) { person in
+                    HStack {
+                        Text("名字 : " + person.firstName)
+                        Text("      ")
+                        Text("名前 : " + person.lastName)
+                    }
+                }
+                .onDelete(perform: people.delete)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    //配列の中身を確認
+                    Button(action: {
+                        print(people.people)
+                    }) {
+                        Image(systemName: "magnifyingglass")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isActive = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .onAppear() {
+                let storePeople = people.getStoreHouse()
+                people.people = people.personDecode(personJson: storePeople)
+            }
         }
-        .padding()
+        .sheet(isPresented: $isActive) {
+            PlusPersonView(save: { first, last in
+                people.people.append(Person(firstName: first, lastName: last))
+                isActive = false
+            })
+        }
     }
 }
 
@@ -24,3 +52,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

@@ -11,6 +11,8 @@
 		8B287AFE2994A81000198A87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B287AFD2994A81000198A87 /* ContentView.swift */; };
 		8B287B002994A81100198A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B287AFF2994A81100198A87 /* Assets.xcassets */; };
 		8B287B032994A81100198A87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B287B022994A81100198A87 /* Preview Assets.xcassets */; };
+		8B287B0A2994A83300198A87 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B287B092994A83300198A87 /* PersonData.swift */; };
+		8B287B0C2994D58500198A87 /* PlusPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B287B0B2994D58500198A87 /* PlusPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8B287AFD2994A81000198A87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B287AFF2994A81100198A87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B287B022994A81100198A87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B287B092994A83300198A87 /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
+		8B287B0B2994D58500198A87 /* PlusPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				8B287AFB2994A81000198A87 /* NameListAppApp.swift */,
 				8B287AFD2994A81000198A87 /* ContentView.swift */,
+				8B287B0B2994D58500198A87 /* PlusPersonView.swift */,
+				8B287B092994A83300198A87 /* PersonData.swift */,
 				8B287AFF2994A81100198A87 /* Assets.xcassets */,
 				8B287B012994A81100198A87 /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B287B0A2994A83300198A87 /* PersonData.swift in Sources */,
+				8B287B0C2994D58500198A87 /* PlusPersonView.swift in Sources */,
 				8B287AFE2994A81000198A87 /* ContentView.swift in Sources */,
 				8B287AFC2994A81000198A87 /* NameListAppApp.swift in Sources */,
 			);
